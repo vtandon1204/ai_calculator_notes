@@ -1,8 +1,11 @@
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './App.tsx';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css'; // Check that this file exists
+import App from './App'; // Ensure this component exists
 
-// Remove StrictMode wrapper
-createRoot(document.getElementById('root')!).render(
-  <App />
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
